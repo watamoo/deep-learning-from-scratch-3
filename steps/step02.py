@@ -14,12 +14,12 @@ class Function:
         return output
 
     def forward(self, in_data):
-        raise NotImplementedError()
+        raise NotImplementedError()  # 継承して使う前提なので、普通に呼び出された場合はエラーを出す
 
 
 class Square(Function):
     def forward(self, x):
-        return x ** 2
+        return x**2
 
 
 x = Variable(np.array(10))
